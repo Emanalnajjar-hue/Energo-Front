@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energo - Products</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/products-style.css">
+
+
+</head>
+
+<body>
+
+
+    <header class="top-bar">
+        <div class="top-bar-wrapper">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon-box"><i class="fa-regular fa-envelope"></i></span>
+                    <span class="contact-text">For Support Mail us: <br> energocamp@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon-box"><i class="fa-solid fa-phone"></i></span>
+                    <span class="contact-text">Service Helpline Call Us: <br> 0593214960</span>
+                </div>
+            </div>
+            <a href="login.html" class="login-button" style="text-decoration: none; display: inline-block;">
+                Login / Sign Up
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="Energo">
+            <span>Energo</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="user-dropdown">
+
+                <button class="dropdown-toggle" id="userBtn">
+                    <img src="../images/avatar.png" alt="User Avatar" class="user-avatar">
+                    <span class="user-name">User</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </button>
+
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="profile.html"><i class="fa-regular fa-user"></i> Profile Settings</a></li>
+                    <li><a href="update_password.html"><i class="fa-solid fa-lock"></i> Update Password</a></li>
+                    <li><a href="mybooking.html"><i class="fa-regular fa-calendar-check"></i> My Booking</a></li>
+                    <li><a href="testmimonial.html"><i class="fa-solid fa-comments"></i> Post a Testimonials</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="sign-out"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="gradient-text">Power Solutions in One Place<br>Find Generators, Batteries & Cables Easily
+                </h1>
+                <p>Browse a wide range of reliable energy solutions designed to meet your needs anytime, anywhere.</p>
+                <button class="explore-btn">Explore Products</button>
+            </div>
+            <div class="hero-image">
+                <img src="../images/hero.jpg" alt="Power Solutions">
+            </div>
+        </div>
+    </section>
+
+    <section class="top-selling-section">
+
+        <div class="section-header">
+            <h2>Our Best Products </h2>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="../images/pro1.jpg" alt="Lithium Battery">
+                <h3>Lithium Battery</h3>
+                <p>High performance storage for your home.</p>
+                <div class="price-row">
+                    <span>$90</span>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../images/pro2.png" alt="Solar Generator">
+                <h3>Solar Generator</h3>
+                <p>Reliable power for daily needs.</p>
+                <div class="price-row">
+                    <span>$150</span>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../images/pro3.png" alt="Solar Motor">
+                <h3>Solar Motor</h3>
+                <p>Advanced motor for energy efficiency.</p>
+                <div class="price-row">
+                    <span>$250</span>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../images/pro4.png" alt="Maintenance Kit">
+                <h3>Maintenance Kit</h3>
+                <p>All-in-one setup and repair tools.</p>
+                <div class="price-row">
+                    <span>$90</span>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="promo-banner">
+            <div class="promo-text">
+                <h3>10% Off For Your First Rental !</h3>
+                <p>Power up your home with our reliable, high-performance generators and batteries.</p>
+            </div>
+            <!-- <a href="booking.html?promo=firstrental" class="claim-btn">Claim Offer</a> -->
+        </div>
+
+        <section class="energy-products-section">
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-border-all"></i> All
+                </button>
+                <button class="filter-btn" data-filter="generators">
+                    <i class="fa-solid fa-bolt"></i> Generators
+                </button>
+                <button class="filter-btn" data-filter="batteries">
+                    <i class="fa-solid fa-battery-full"></i> Batteries
+                </button>
+                <button class="filter-btn" data-filter="cables">
+                    <i class="fa-solid fa-plug-circle-bolt"></i> Cables
+                </button>
+                <button class="filter-btn" data-filter="kits">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> Kits
+                </button>
+            </div>
+            <div class="products-background-wrapper"></div>
+
+            <div class="energy-grid-container">
+            </div>
+            <div class="energy-grid-container">
+
+                <div class="energy-item-box" data-category="kits">
+                    <img src="../images/toolkit.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Universal Toolkits </h3>
+                    <p> </p>
+                    <p>10.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+
+                        <a href="booking.html?product=product1" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="cables">
+                    <img src="../images/monitor.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3> Digital Monitor</h3>
+                    <p>8.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product2" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="cables">
+                    <img src="../images/ch1.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3> Charger </h3>
+                    <p>20.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product10" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="cables">
+                    <img src="../images/ch2.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3> Charger Unit </h3>
+                    <p>50.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product11" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="energy-item-box" data-category="cables">
+                    <img src="../images/cables.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3> Heavy-Duty Cables</h3>
+                    <p>5.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status booked">Booked</div>
+                        <a href="booking.html?product=product3" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="generators">
+                    <img src="../images/generator_portable.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Partable Generator</h3>
+                    <p>25.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product4" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="generators">
+                    <img src="../images/power_station_green.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Green Power Station </h3>
+                    <p>20.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product5" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="generators">
+                    <img src="../images/power_station_pro.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Pro Power Station</h3>
+                    <p>30.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status booked">Booked</div>
+                        <a href="booking.html?product=product6" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="generators">
+                    <img src="../images/inverter.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Compact Inverter</h3>
+                    <p>15.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product7" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="energy-item-box" data-category="batteries">
+                    <img src="../images/lithium_cells.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Lithium Cells</h3>
+                    <p>4.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status booked">Booked</div>
+                        <a href="booking.html?product=product8" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="energy-item-box" data-category="batteries">
+                    <img src="../images/battery_home.png" alt="Product">
+                    <div class="energy-shelf-shadow"></div>
+                    <h3>Home Power Battery</h3>
+                    <p>25.00$ </p>
+                    <div class="energy-actions">
+                        <div class="energy-status available">Available</div>
+                        <a href="booking.html?product=product9" class="energy-view-btn">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="special-offers-container">
+
+            <div class="offers-sidebar">
+                <span class="discount-badge">20% OFF</span>
+                <h3>Special Offers</h3>
+                <div class="countdown-timer">
+                    <span class="timer-box">02</span> :
+                    <span class="timer-box">26</span> :
+                    <span class="timer-box">49</span>
+                </div>
+            </div>
+
+            <div class="offers-grid">
+
+                <div class="offer-card">
+                    <span class="sale-ribbon">SALE</span>
+                    <img src="../images/pro-sale1.png" alt="Battery">
+                    <h4>Deep Cycle Battery 200Ah</h4>
+                    <p class="price-info"><span class="old-price">25$</span> 15$</p>
+                    <a href="booking.html?product=offer1" class="book-now-btn">Book Now</a>
+
+                </div>
+
+                <div class="offer-card">
+                    <span class="sale-ribbon">SALE</span>
+                    <img src="../images/pro-sale2.png" alt="Cable">
+                    <h4>Heavy-Duty Power Cable</h4>
+                    <p class="price-info"><span class="old-price">10$</span> 5$</p>
+                    <a href="booking.html?product=offer2" class="book-now-btn">Book Now</a>
+
+                </div>
+
+                <div class="offer-card">
+                    <span class="sale-ribbon">SALE</span>
+                    <img src="../images/pro-sale3.png" alt="Light">
+                    <h4>LED Power Light</h4>
+                    <p class="price-info"><span class="old-price">25$</span> 15$</p>
+                    <a href="booking.html?product=offer1" class="book-now-btn">Book Now</a>
+                </div>
+
+                <div class="offer-card">
+                    <span class="sale-ribbon">SALE</span>
+                    <img src="../images/pro-sale4.png" alt="Light">
+                    <h4>LED Power Light</h4>
+                    <p class="price-info"><span class="old-price">25$</span> 15$</p>
+                    <a href="booking.html?product=offer1" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="cta-banner">
+            <div class="banner-content">
+                <div class="logo-area">
+                    <img src="../images/logo.png" alt="Logo">
+                </div>
+                <div class="text-area">
+                    <h3>Ready to Power Your Future?</h3>
+                    <p>Book a service or consultation with our experts today and start saving.</p>
+                </div>
+
+                <div class="buttons-area">
+                    <a href="services.html" class="btn-solid" style="text-decoration: none !important;">Book Service
+                        Now</a>
+                    <a href="maintenance.html" target="_blank" class="btn-outline"
+                        style="text-decoration: none !important;">Contact Experts</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-bolt logo-lightning"></i>
+                        <div class="logo-title-group">
+                            <h3>POWER</h3>
+                            <h4>SOLUTIONS</h4>
+                        </div>
+                    </div>
+                    <p class="brand-desc">We provide reliable power solutions including generator rental, maintenance,
+                        and battery services to ensure uninterrupted electricity anytime.</p>
+                    <div class="footer-contacts">
+                        <div class="contact-row"><i class="fa-solid fa-phone"></i> +972593214960</div>
+                        <div class="contact-row"><i class="fa-solid fa-envelope"></i> energocamp@gmail.com</div>
+                        <div class="contact-row"><i class="fa-solid fa-location-dot"></i> Palestine, Gaza</div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="column-title">QUICK LINKS</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="home.html">&gt; Home</a></li>
+                        <li><a href="#">&gt; Products</a></li>
+                        <li><a href="services.html">&gt; Services</a></li>
+                        <li><a href="#">&gt; Generators</a></li>
+                        <li><a href="#">&gt; Batteries</a></li>
+                        <li><a href="#">&gt; About Us</a></li>
+                        <li><a href="#">&gt; Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="column-title">OUR SERVICES</h3>
+                    <ul class="footer-services-list">
+                        <li><span class="service-icon-box"><i class="fa-solid fa-warehouse"></i></span> Generator Rental
+                        </li>
+                        <li><span class="service-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                            Electrical Maintenance</li>
+                        <li><span class="service-icon-box"><i class="fa-solid fa-battery-three-quarters"></i></span>
+                            Battery Solutions</li>
+                        <li><span class="service-icon-box"><i class="fa-solid fa-headset"></i></span> Emergency Support
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="column-title">FOLLOW US</h3>
+                    <ul class="social-links-list">
+                        <li><a href="#">
+                                <div class="social-icon-circle"><i class="fa-brands fa-facebook-f"></i></div> Facebook
+                            </a></li>
+                        <li><a href="#">
+                                <div class="social-icon-circle"><i class="fa-brands fa-instagram"></i></div> Instagram
+                            </a></li>
+                        <li><a href="#">
+                                <div class="social-icon-circle"><i class="fa-brands fa-whatsapp"></i></div> WhatsApp
+                            </a></li>
+                        <li><a href="#">
+                                <div class="social-icon-circle"><i class="fa-brands fa-linkedin-in"></i></div> LinkedIn
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Energo. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+        <script src="../script/products-script.js">
+        </script>
+        <div class="mobile-search-bar">
+            <div class="mobile-search-inner">
+                <input type="text" placeholder="Search products...">
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html" class="bnav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="products.html" class="bnav-item active">
+                <i class="fa-solid fa-box-open"></i>
+                <span>Products</span>
+            </a>
+            <a href="services.html" class="bnav-item">
+                <i class="fa-solid fa-wrench"></i>
+                <span>Services</span>
+            </a>
+            <a href="about.html" class="bnav-item">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>About</span>
+            </a>
+        </div>
+
+</body>
+
+</html>
