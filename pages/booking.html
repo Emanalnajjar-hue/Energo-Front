@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/booking-style.css">
+
+</head>
+
+<body>
+
+    <header class="main-header" style="background-image: url('../images/header.png');">
+        <div class="header-overlay"></div>
+        <div class="content-wrapper">
+            <h1>Practical Energy <span>Booking Made Easy</span></h1>
+            <p>Rent batteries, generators and cables easily and safely in Gaza.</p>
+
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Reliable Equipment</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Flexible Booking</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Affordable Prices</span>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="booking-bar">
+            <h3 class="section-title">
+                <span class="circle-num">1</span>
+                <span class="green-text">Simple Booking Bar</span>
+            </h3>
+            <p class="subtitle">Choose your equipment and booking details</p>
+
+            <div class="booking-inputs">
+
+                <div class="input-group">
+                    <label><i class="fas fa-calendar-alt"></i> Pickup Date & Time</label>
+                    <div class="date-time-wrapper">
+                        <input type="date" id="pickup-date">
+                        <input type="time" id="pickup-time">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-calendar-alt"></i> Return Date & Time</label>
+                    <div class="date-time-wrapper">
+                        <input type="date" id="return-date">
+                        <input type="time" id="return-time">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Location (Gaza)</label>
+                    <select name="location" id="location-select">
+                        <option value="" disabled selected>Select Location</option>
+                        <option value="north">North Gaza / Gaza City </option>
+                        <option value="middle">Middle Area / Gaza City</option>
+                        <option value="south">South Gaza / Gaza City</option>
+                    </select>
+                    <button class="update-btn" id="check-btn">Update Result <i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-grid-layout">
+
+            <section class="main-grid-layout">
+                <aside class="summary-section">
+                    <h3 class="section-title">
+                        <span class="circle-num">2</span>
+                        <span class="green-text">Your Booking Summary</span>
+                    </h3>
+
+                    <div id="dynamic-summary-product"></div>
+
+                    <div class="summary-card">
+                        <p><strong>Add-ons & Accessories</strong></p>
+
+                        <div class="addon-item">
+                            <label>
+                                <input type="checkbox" class="addon-checkbox" data-price="5.00">
+                                <img src="../images/power-cables.png" class="addon-img">
+                                <span style="font-size: 0.9em;">
+                                    Power Cables set -
+                                    <span style="color: #10482D;">$5.00/day</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="addon-item">
+                            <label>
+                                <input type="checkbox" class="addon-checkbox" data-price="90.00">
+                                <img src="../images/pro4.png" class="addon-img">
+                                <span style="font-size: 0.9em;">
+                                    Maintenance Kit -
+                                    <span style="color: #10482D;">$90.00/day</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="addon-item">
+                            <label>
+                                <input type="checkbox" class="addon-checkbox" data-price="2.00">
+                                <img src="../images/acc1.png" class="addon-img">
+                                <span style="font-size: 0.9em;">
+                                    Power Cables(5cm) -
+                                    <span style="color: #10482D;">$2.00/day</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="price-row">
+                            <span>Base Price (<span id="days-count">1</span> days)</span>
+                            <span id="base-total">$0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Accessories</span>
+                            <span id="addons-total">$0.00</span>
+                        </div>
+                        <hr>
+                        <div class="total-row">
+                            <strong>Total Amount</strong>
+                            <strong class="total-price" id="grand-total">$0.00</strong>
+                        </div>
+
+                 <button class="book-now-btn" id="book-btn" type="button">
+                 Book Now <i class="fas fa-arrow-right"></i>
+                 </button>
+                    </div>
+
+                    <div class="summary-card payment-section">
+                        <p><strong>Secure Payment with PayPal</strong></p>
+                        <div class="payment-info">
+                            <img src="../images/palpay-logo1.png" alt="PayPal" class="payment-img">
+                            <span>Safe, fast and secure payments via PayPal</span>
+                        </div>
+                    </div>
+
+                </aside>
+            </section>
+            <script src="../script/booking-script.js"></script>
+</body>
+
+</html>

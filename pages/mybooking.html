@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/mybooking-style.css">
+
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <div class="profile-img">
+                <img src="../images/booking.jpg" alt="Profile Picture">
+                <i class="fa-solid fa-camera camera-icon"></i>
+            </div>
+            <h3>Doaa M Lubbad</h3>
+
+            <div class="user-info">
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="userEmail" value="energocamp@gmail.com" onchange="saveData()">
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="userPhone" value="+972 79 123 4567" onchange="saveData()">
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" id="userLocation" value="Gaza, Palestine" onchange="saveData()">
+                </div>
+            </div>
+
+            <div class="status"><i class="fa-solid fa-circle-check"></i> Verified User</div>
+            <p><i class="fa-solid fa-shield-halved"></i> Silver Member</p>
+
+            <div class="rentals-box">
+                <i class="fa-solid fa-chart-line"></i> Total Rentals: 8
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>My Booking</h1>
+            <p>View and manage all your current and past power equipment rentals</p>
+            <hr>
+
+            <div class="booking-row" id="booking-1">
+                <img src="../images/generator_portable.png" class="product-img">
+                <div class="details">
+                    <h3>Product Name: Portable Generator</h3>
+                    <p>Date: 20 Aug 2026 & Time: 10:00 AM</p>
+                    <p>Location: Khan Yunis, Gaza</p>
+                    <p>Price: 25.00$ / day</p>
+                </div>
+                <button class="cancel-btn" onclick="removeBooking(this)">Cancel Booking</button>
+            </div>
+
+            <div class="booking-row" id="booking-2">
+                <img src="../images/eco power station.jpg" class="product-img">
+                <div class="details">
+                    <h3>Product Name: Eco Power Station</h3>
+                    <p>Date: 22 April 2026 & Time: 2:00 PM</p>
+                    <p>Location: Jabalia Camp, Gaza</p>
+                    <p>Price: 20.00$ / day</p>
+                </div>
+                <button class="cancel-btn" onclick="removeBooking(this)">Cancel Booking</button>
+            </div>
+
+            <div class="booking-row" id="booking-3">
+                <img src="../images/toolkit.png" class="product-img">
+                <div class="details">
+                    <h3>Product Name: Universal Toolkit</h3>
+                    <p>Date: 7 Mar 2026 & Time: 12:00 PM</p>
+                    <p>Location: AL-Rimal, Gaza</p>
+                    <p>Price: 10.00$ / day</p>
+                </div>
+                <button class="cancel-btn" onclick="removeBooking(this)">Cancel Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function removeBooking(btn) {
+            if (!confirm('Are you sure you want to cancel this booking?')) return;
+
+            var row = btn.closest('.booking-row');
+            row.classList.add('removing');
+
+            row.addEventListener('animationend', function () {
+                row.remove();
+
+                var remaining = document.querySelectorAll('.booking-row');
+                if (remaining.length === 0) {
+                    var container = document.querySelector('.container');
+                    var emptyMsg = document.createElement('div');
+                    emptyMsg.style.cssText = 'text-align:center; padding:50px 20px; color:#999;';
+                    emptyMsg.innerHTML = '<i class="fa-solid fa-box-open" style="font-size:40px; margin-bottom:12px; display:block; color:#ccc;"></i><p>No bookings found.</p>';
+                    container.appendChild(emptyMsg);
+                }
+            });
+        }
+
+        function saveData() {
+            var email = document.getElementById('userEmail').value;
+            var phone = document.getElementById('userPhone').value;
+            var location = document.getElementById('userLocation').value;
+
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPhone', phone);
+            localStorage.setItem('userLocation', location);
+        }
+
+        window.addEventListener('DOMContentLoaded', function () {
+            var savedEmail = localStorage.getItem('userEmail');
+            var savedPhone = localStorage.getItem('userPhone');
+            var savedLocation = localStorage.getItem('userLocation');
+
+            if (savedEmail) document.getElementById('userEmail').value = savedEmail;
+            if (savedPhone) document.getElementById('userPhone').value = savedPhone;
+            if (savedLocation) document.getElementById('userLocation').value = savedLocation;
+        });
+    </script>
+</body>
+
+</html>

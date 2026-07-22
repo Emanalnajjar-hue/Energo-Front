@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/payment-style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <header class="page-header">
+            <h2>Secure Checkout</h2>
+            <div class="steps-indicator">
+                <span class="step active"><i class="fa-solid fa-clipboard-check"></i> Details</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+                <span class="step active"><i class="fa-solid fa-credit-card"></i> Payment</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+                <span class="step"><i class="fa-solid fa-check-circle"></i> Confirmation</span>
+            </div>
+        </header>
+
+        <div class="checkout-grid">
+
+            <section class="summary-card">
+                <div class="card-header">
+                    <h3><i class="fa-solid fa-receipt"></i> Booking Summary</h3>
+                </div>
+
+                <div class="product-summary" id="payment-product-summary"></div>
+
+                <hr class="divider">
+
+            </section>
+
+            <section class="payment-card">
+                <div class="card-header">
+                    <h3><i class="fa-solid fa-wallet"></i> Payment Method</h3>
+                </div>
+
+                <div class="payment-method-box">
+                    <div class="method-header">
+                        <img src="../images/palpay.png" alt="PalPay" class="method-logo">
+                        <div class="method-info">
+                            <strong>PalPay</strong>
+                            <span>Secure Payment Gateway</span>
+                        </div>
+                        <i class="fa-solid fa-check-circle checked-icon"></i>
+                    </div>
+
+                    <div class="payment-form">
+                        <label>Registered Mobile Number</label>
+                        <div class="input-wrapper">
+                            <img src="../images/pal-flag.jpg" alt="Flag" class="flag">
+                            <input type="text" placeholder="+972-59-XXX XXXX" class="phone-input" id="phone-input">
+                            <span class="verified-badge">Verified</span>
+                        </div>
+                        <p class="small-note">You will receive an SMS to confirm payment.</p>
+                    </div>
+                </div>
+
+                <a href="scan_qr.html" class="pay-btn">
+                    Confirm Pay
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+
+                <p class="secure-text">
+                    <i class="fa-solid fa-shield-halved"></i> 256-bit SSL Encrypted Payment. Your data is safe.
+                </p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../script/payment-script.js"></script>
+</body>
+
+</html>
